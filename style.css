@@ -198,7 +198,6 @@ figcaption { padding-top: 0.35rem; font-family: var(--sans); font-size: 0.85rem;
 
 /* Nameplate letters drop in, then jump when you hover them */
 .js .logo .ch { display: inline-block; animation: drop 1s cubic-bezier(.3, 1.7, .4, 1) backwards; animation-delay: calc(var(--i) * 70ms); transition: transform .3s cubic-bezier(.3, 1.8, .4, 1), color .2s; }
-.js .logo .ch:hover { transform: translateY(-.14em) rotate(-9deg) scale(1.12); color: var(--red); }
 
 /* Headline words slam onto the page */
 .js h1 .w { display: inline-block; animation: slam .9s cubic-bezier(.2, 1.6, .3, 1) backwards; animation-delay: calc(.9s + var(--i) * 140ms); transition: transform .35s cubic-bezier(.3, 1.8, .4, 1), color .2s; }
@@ -242,3 +241,12 @@ figcaption { padding-top: 0.35rem; font-family: var(--sans); font-size: 0.85rem;
 @keyframes float { from { transform: rotate(-14deg) translateY(-1rem); } to { transform: rotate(24deg) translateY(1.5rem) scale(1.1); } }
 
 @media (max-width: 40rem) { .shapes { opacity: .35; } }
+
+/* Hover the nameplate: every letter flips over to a middle finger, one after another */
+.js .logo { perspective: 900px; }
+.js .logo .ch { position: relative; transform-style: preserve-3d; transition: transform .7s cubic-bezier(.3, 1.5, .4, 1); transition-delay: calc(var(--i) * 45ms); }
+.js .logo .fr { display: inline-block; }
+.js .logo .fr, .js .logo .bk { backface-visibility: hidden; -webkit-backface-visibility: hidden; }
+.js .logo .bk { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; transform: rotateY(180deg); font-size: .8em; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+.js .logo:hover .ch.flip,
+.js .logo:focus-visible .ch.flip { transform: rotateY(180deg); }

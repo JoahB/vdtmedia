@@ -16,7 +16,12 @@
       s.className = 'ch';
       s.setAttribute('aria-hidden', 'true');
       s.style.setProperty('--i', i);
-      s.textContent = c === ' ' ? '\u00a0' : c;
+      if (c === ' ') {
+        s.textContent = '\u00a0';
+      } else {
+        s.classList.add('flip');
+        s.innerHTML = `<span class="fr">${c}</span><span class="bk">\u{1F595}</span>`;
+      }
       logo.append(s);
     });
   }
