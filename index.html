@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VDT Media | Documentary Films</title>
+  <meta name="description" content="VDT Media makes documentary films.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Bodoni+Moda:opsz,wght@6..96,600;6..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <p class="edition">Documentary films, made in colour</p>
+    <a class="logo" href="#front">VDT Media</a>
+    <nav aria-label="Main">
+      <a href="#front">Front page</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- TICKER: scrolling headline strip (edit the phrases) -->
+  <div class="ticker" aria-hidden="true">
+    <div class="track">
+      <span>True stories, told in colour</span>
+      <span>Documentary films</span>
+      <span>Real people, real places</span>
+      <span>Have a look around the gallery</span>
+      <span>Say hello: management@vdt-media.com</span>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- SECTION 1: FRONT PAGE -->
+    <section class="page" id="front">
+      <div class="shapes" aria-hidden="true"><i class="s1"></i><i class="s2"></i><i class="s3"></i><i class="s4"></i><i class="s5"></i></div>
+      <h1>The world, as it happens.</h1>
+      <div class="intro">
+        <p class="lead">VDT Media is a new documentary company. We make films about people, places and the things that shape them.</p>
+        <p>Edit this paragraph with a few more lines about your first projects. It runs in a second column on wide screens, like a newspaper story.</p>
+      </div>
+
+      <!-- PICTURES: to use a real photo, replace the <div class="art ..."></div> with <div class="art"><img src="images/your-photo.jpg" alt="Describe the photo"></div> -->
+      <div class="grid feature">
+        <figure class="big"><div class="art"><img src="images/team.jpg" alt="Two smiling young men taking a selfie on a brick street"></div><figcaption>Add a caption here</figcaption></figure>
+        <figure><div class="art"><img src="images/basket-carrier.jpg" alt="A barefoot boy carrying two yellow baskets on poles across a street, seen from above" style="object-position:45% 60%"></div><figcaption>Carrying the load across the street</figcaption></figure>
+        <figure><div class="art"><img src="images/windswept.jpg" alt="A woman with windswept hair looking out to sea from a boat" style="object-position:62% 40%"></div><figcaption>Wind in her hair, eyes on the coast</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- SECTION 2: GALLERY (add as many <figure> blocks as you like; classes wide and tall make them bigger) -->
+    <section class="page" id="gallery">
+      <h2>Gallery</h2>
+      <div class="grid mosaic">
+        <figure class="wide"><div class="art"><img src="images/baskets-broken-roof.jpg" alt="Woven baskets scattered on the floor of a building with a broken roof and plants growing in"></div><figcaption>Baskets left behind under a broken roof</figcaption></figure>
+        <figure><div class="art"><img src="images/yellow-cloth.jpg" alt="Yellow and white cloth hanging from a pole, with baskets out of focus behind"></div><figcaption>Yellow cloth on a pole, baskets beyond</figcaption></figure>
+        <figure class="tall"><div class="art"><img src="images/carved-door.jpg" alt="A carved wooden door standing open onto a mossy wall and ferns" style="object-position:45% 50%"></div><figcaption>A carved door, ferns waiting inside</figcaption></figure>
+        <figure><div class="art"><img src="images/boat-crew.jpg" alt="A smiling boat crew member seen through the white timber frame of a boat"></div><figcaption>The boat crew, framed by white timber</figcaption></figure>
+        <figure class="wide"><div class="art"><img src="images/open-water.jpg" alt="Blue sea with hazy green hills on the horizon"></div><figcaption>Open water, hills on the horizon</figcaption></figure>
+        <figure><div class="art"><img src="images/wake.jpg" alt="Blurred white foam of a boat wake on turquoise water"></div><figcaption>The wake, caught in motion</figcaption></figure>
+        <figure><div class="art"><img src="images/cargo-ship.jpg" alt="A cargo ship on the horizon beyond a white ferry railing and hazy hills"></div><figcaption>A cargo ship on the horizon</figcaption></figure>
+        <figure class="wide"><div class="art"><img src="images/ferry-passengers.jpg" alt="Passengers on a ferry deck watching a green island go by"></div><figcaption>Passengers watching the island go by</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- SECTION 3: CONTACT -->
+    <section class="page" id="contact">
+      <h2>Contact</h2>
+      <p>Write to <a class="link" href="mailto:management@vdt-media.com">management@vdt-media.com</a> or use the form.</p>
+      <form class="contact-form" action="#" method="post">
+        <label for="name">Your name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+        <label for="email">Your email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+        <label for="message">Your message</label>
+        <textarea id="message" name="message" rows="3" required></textarea>
+        <button class="link" type="submit">Send message</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="site-footer"><p>&copy; 2026 VDT Media</p></footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
